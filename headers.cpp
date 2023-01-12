@@ -1,1 +1,48 @@
 #include "headers.h"
+
+// constructors
+Employee:: Employee(){
+    this-> name = "VOID";
+    this-> id = 0;
+    this-> position = "VOID";
+    this-> salary = 0;
+    return;
+}
+
+Employee:: Employee(string name, int id, string position, float salary){
+    this-> name = name;
+    this-> id = id;
+    this-> position = position;
+    this-> salary = salary;
+    return;
+}
+
+// accessors
+string Employee:: get_name(){ return name; }
+
+int Employee:: get_id(){ return id; }
+
+string Employee:: get_position(){ return position; }
+
+float Employee:: get_salary(){ return salary; }
+
+// mutators
+void Employee:: set_name(string name){
+    this-> name = name;
+    return;
+}
+
+void Employee:: set_id(int id){
+    this-> id = id;
+    return;
+}
+
+void Employee:: set_position(string position){
+    this-> position = position;
+    return;
+}
+
+void Employee:: set_salary(float salary){
+    this-> salary = salary;
+    return;
+}
