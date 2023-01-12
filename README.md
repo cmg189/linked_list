@@ -3,6 +3,7 @@
 This program implements a double linked list in C++
 
 Objects of an Employee class or stored in this linked list.
+
 These objects contain basic employee information such as thier name, ID, position, and salary.
 
 ## Table of Contents
@@ -17,7 +18,9 @@ These objects contain basic employee information such as thier name, ID, positio
 ## Description <a name="desc"></a>
 
 A linked list is a data structure that holds a collection of data elements refered to as nodes.
+
 Nodes in a linked list reference their neighbooring node by a pointer.
+
 A linked list's memory is allociated dynamically during run time, as opposed to an array who's memory is typically allociated during compilation.
 
 There are two main types of linked lists
@@ -31,15 +34,17 @@ There are two main types of linked lists
 ## Compile and Execute <a name="exe"></a>
 
 - Windows
+
   To compile run the command: `g++ main.cpp headers.cpp -o list`
 
   To execute run the command: `list.exe`
 
 - Linux / Mac
+
   To compile run the command: `g++ main.cpp headers.cpp -o list`
 
   To execute run the command: `./list`
-  
+
 
 ## Function Headers <a name="func"></a>
 
