@@ -49,6 +49,24 @@ There are two main types of linked lists
 ## Function Headers <a name="func"></a>
 
 ```cpp
+void start_info()
+```
+
+- Description
+
+  Outputs program description to user
+
+- Parameters
+
+  None
+
+- Return
+
+  None
+
+---
+
+```cpp
 
 ```
 
