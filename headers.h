@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+// Class to be stored in linked list
 class Employee {
     public:
         // constructors
@@ -26,3 +27,6 @@ class Employee {
         string position;
         float salary;
 };
+
+// output program description
+void start_info();
