@@ -53,6 +53,23 @@ void start_info(){
     cout << "Initalize employee objects to store them in a double linked list\n\n";
     cout << "Employee's have the following attributes:\n";
     cout << "- Name\n- ID\n- Position\n- Salary\n\n";
+    return;
+}
+
+// initialize list from file
+void load_data(){
+    const string FILE = "data.txt";
+
+    // open file for reading
+    ifstream reading;
+    reading.open(FILE);
+    if(reading.file()){
+        cout << "Unable to load employee data from " << FILE << "\n\n";
+        cout << "Program ended\n\n";
+        exit(EXIT_FAILURE);
+    }
+
+    reading.close();
 
     return;
 }

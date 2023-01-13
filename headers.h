@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 // Class to be stored in linked list
@@ -30,3 +31,9 @@ class Employee {
 
 // output program description
 void start_info();
+
+// initialize list from file
+void load_data();
+
+// menu choices
+int menu();
