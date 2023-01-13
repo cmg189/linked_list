@@ -1,0 +1,6 @@
+Ernst Muller, 145521, IT, 45100
+Anna Fischer, 987166, Customer Support, 40500
+Otto Wagner, 443122, Manager, 51000
+Jonas Weber, 219087, Contract, 47500
+Hans Zimmer, 445900, IT, 50700
+Klaus Schmidt, 771897, Supervisor, 49800
