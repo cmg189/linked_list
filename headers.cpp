@@ -47,6 +47,16 @@ void Employee:: set_salary(float salary){
     return;
 }
 
+// constructor
+List:: List(Employee person){
+    List* node = new List();
+    node-> data = person;
+    node-> infront = nullptr;
+    node-> behind = nullptr;
+    return;
+}
+
+
 // output program description
 void start_info(){
     cout << "\t\tDouble Linked List\n\n";
