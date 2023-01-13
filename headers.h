@@ -3,7 +3,7 @@
 #include <fstream>
 using namespace std;
 
-// Class to be stored in linked list
+// stored in linked list
 class Employee {
     public:
         // constructors
@@ -27,6 +27,19 @@ class Employee {
         int id;
         string position;
         float salary;
+};
+
+// double linked list
+class List {
+    public:
+        List();
+        List(Employee person);
+        Employee data;
+        List* infont;
+        List* behind;
+
+        void append();
+
 };
 
 // output program description
