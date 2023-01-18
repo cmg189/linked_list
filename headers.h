@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <sstream>
 using namespace std;
 
 // stored in linked list
@@ -32,10 +33,10 @@ class Employee {
 // double linked list
 class List {
     public:
-        List();
+        //List();
         List(Employee person);
         Employee data;
-        List* infont;
+        List* infront;
         List* behind;
 
         void append();

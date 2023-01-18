@@ -49,7 +49,7 @@ void Employee:: set_salary(float salary){
 
 // constructor
 List:: List(Employee person){
-    List* node = new List();
+    List* node = new List(person);
     node-> data = person;
     node-> infront = nullptr;
     node-> behind = nullptr;
@@ -73,10 +73,15 @@ void load_data(){
     // open file for reading
     ifstream reading;
     reading.open(FILE);
-    if(reading.file()){
+    if(reading.fail()){
         cout << "Unable to load employee data from " << FILE << "\n\n";
         cout << "Program ended\n\n";
         exit(EXIT_FAILURE);
+    }
+
+    string line;
+    while(getline(reading, line)){
+        cout << line << endl;
     }
 
     reading.close();
