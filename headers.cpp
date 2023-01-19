@@ -79,9 +79,34 @@ void load_data(){
         exit(EXIT_FAILURE);
     }
 
+    // remove all commas and make Employee objects 
     string line;
+    vector<Employee> collection;
     while(getline(reading, line)){
-        cout << line << endl;
+        // name
+        int comma_index = line.find(",");
+        string temp = line.substr(comma_index +2);
+        string name = line.substr(0, comma_index);
+
+        // ID
+        comma_index = temp.find(",");
+        string str_id = temp.substr(0, comma_index);
+        int id = stoi(str_id);
+
+        // department
+        comma_index = temp.find(",");
+        temp = temp.substr(comma_index +2);
+        comma_index = temp.find(",");
+        string dept = temp.substr(0, comma_index);
+
+        // salary 
+        comma_index = temp.find(",");
+        string str_salary = temp.substr(comma_index +2);
+        float salary = stof(str_salary);
+
+        // save objects
+        Employee person(name, id, dept, salary);
+        collection.push_back(person);
     }
 
     reading.close();
