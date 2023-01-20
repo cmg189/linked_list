@@ -159,3 +159,15 @@ void start_info(){
     cout << "- Name\n- ID\n- Position\n- Salary\n\n";
     return;
 }
+
+int menu(){
+    int choice;
+    cout << "Choose a list operation to perform\n";
+    cout << "1 Add employee\n";
+    cout << "2 Delete employee\n";
+    cout << "3 Output list\n\n";
+    cout << "\n>";
+    cin >> choice;
+
+    return choice;
+}
