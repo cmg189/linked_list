@@ -138,7 +138,7 @@ class Employee
 
   `void output_info()` Outputs all private member variables of object
 
-- Private Member Variables
+- Private Member Variables:
 
   `string name` Represents an employee's name
 
@@ -148,6 +148,33 @@ class Employee
 
   `float salary` Represents an employee's salary
 
+---
+
+```cpp
+class List
+```
+
+- Description
+
+  This class represents a double linked list
+
+- Public Member Functions
+
+  Constructors:
+
+  `List(Employee person)` Parameterized constructor
+
+  Variables:
+
+  `Employee data` Object to be added to list
+
+  `List* infront` Pointer to node infront of current node
+
+  `List* behind` Pointer to node behind current node
+
+  Functions:
+
+  `void output_all(List* head)` Outputs all objects in list starting at head
 
 
 
