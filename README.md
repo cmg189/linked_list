@@ -67,6 +67,24 @@ void start_info()
 ---
 
 ```cpp
+vector<Employee> load_data();
+```
+
+- Description
+
+  Reads employee data from file to create objects that will initalize the linked list
+
+- Parameters
+
+  None
+
+- Return
+
+  `vector<Employee> collection` Vector of employee objects to initalize linked list
+
+---
+
+```cpp
 
 ```
 
