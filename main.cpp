@@ -4,7 +4,9 @@ int main(){
 
     start_info();
 
-    load_data();
+    vector<Employee> collection = load_data();
+
+    init_list(collection);
 
     cout << "Program ended\n\n";
     return 0;
