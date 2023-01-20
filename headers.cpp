@@ -75,15 +75,6 @@ void List:: output_all(List* head){
     return;
 } 
 
-// output program description
-void start_info(){
-    cout << "\t\tDouble Linked List\n\n";
-    cout << "Initalize employee objects to store them in a double linked list\n\n";
-    cout << "Employee's have the following attributes:\n";
-    cout << "- Name\n- ID\n- Position\n- Salary\n\n";
-    return;
-}
-
 // initialize objects from file
 vector<Employee> load_data(){
     const string FILE = "data.txt";
@@ -158,5 +149,14 @@ void init_list(vector<Employee> collection){
 
     node->output_all(head);
 
+    return;
+}
+
+// output program description
+void start_info(){
+    cout << "\t\tDouble Linked List\n\n";
+    cout << "Initalize employee objects to store them in a double linked list\n\n";
+    cout << "Employee's have the following attributes:\n";
+    cout << "- Name\n- ID\n- Position\n- Salary\n\n";
     return;
 }
