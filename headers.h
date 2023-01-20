@@ -24,6 +24,8 @@ class Employee {
         void set_position(string position);
         void set_salary(float salary);
 
+        void output_info();
+
     private:
         string name;
         int id;
@@ -40,7 +42,7 @@ class List {
         List* infront;
         List* behind;
 
-        void output_all();
+        void output_all(List* head);
         void append();
 
 };
