@@ -134,6 +134,10 @@ class Employee
 
   `void set_salary(float salary)` Assigns an employee's salary
 
+  Functions:
+
+  `void output_info()` Outputs all private member variables of object
+
 - Private Member Variables
 
   `string name` Represents an employee's name
@@ -143,5 +147,8 @@ class Employee
   `string position` Represents an employee's position
 
   `float salary` Represents an employee's salary
+
+
+
 
 ## Resources <a name="res"></a>
