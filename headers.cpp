@@ -56,7 +56,6 @@ List:: List(Employee person){
     return;
 }
 
-
 // output program description
 void start_info(){
     cout << "\t\tDouble Linked List\n\n";
@@ -66,8 +65,8 @@ void start_info(){
     return;
 }
 
-// initialize list from file
-void load_data(){
+// initialize objects from file
+vector<Employee> load_data(){
     const string FILE = "data.txt";
 
     // open file for reading
@@ -85,7 +84,7 @@ void load_data(){
     while(getline(reading, line)){
         // name
         int comma_index = line.find(",");
-        string temp = line.substr(comma_index +2);
+        string temp = line.substr(comma_index +1);
         string name = line.substr(0, comma_index);
 
         // ID
@@ -95,13 +94,13 @@ void load_data(){
 
         // department
         comma_index = temp.find(",");
-        temp = temp.substr(comma_index +2);
+        temp = temp.substr(comma_index +1);
         comma_index = temp.find(",");
         string dept = temp.substr(0, comma_index);
 
         // salary 
         comma_index = temp.find(",");
-        string str_salary = temp.substr(comma_index +2);
+        string str_salary = temp.substr(comma_index +1);
         float salary = stof(str_salary);
 
         // save objects
@@ -110,6 +109,12 @@ void load_data(){
     }
 
     reading.close();
+
+    return collection;
+}
+
+// initialize list from objects
+void init_list(vector<Employee> collection){
 
     return;
 }
