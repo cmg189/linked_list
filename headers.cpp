@@ -49,12 +49,19 @@ void Employee:: set_salary(float salary){
 
 // constructor
 List:: List(Employee person){
-    List* node = new List(person);
-    node-> data = person;
-    node-> infront = nullptr;
-    node-> behind = nullptr;
+    //List* node = new List(person);
+    //node-> data = person;
+    this -> data = person;
+    this-> infront = nullptr;
+    this-> behind = nullptr;
     return;
 }
+
+// output all objects in data
+void List:: output_all(){
+    cout << this-> data.get_name() << endl;
+    return;
+} 
 
 // output program description
 void start_info(){
@@ -115,6 +122,27 @@ vector<Employee> load_data(){
 
 // initialize list from objects
 void init_list(vector<Employee> collection){
+    // create head node
+    Employee person = collection.front();
+    collection.erase(collection.begin());
+    List* node = new List(person);
+    node->infront = nullptr;
+    node->behind = nullptr;
+    List* head;
+    List* tail;
+    head = node;
+    tail = node;
+
+    // add all objects to node
+    while(!collection.empty()){
+        person = collection.front();
+        node = new List(person);
+        node->infront = nullptr;
+        node->behind = tail;
+        tail->infront = node;
+        tail = node;
+        collection.erase(collection.begin());
+    }
 
     return;
 }
