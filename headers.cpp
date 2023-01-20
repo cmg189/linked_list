@@ -66,7 +66,12 @@ List:: List(Employee person){
 
 // output all objects in data
 void List:: output_all(List* head){
-    
+    List* display = head;
+    while(display != nullptr){
+        Employee person = display->data;
+        person.output_info();
+        display = display->behind;
+    }
     return;
 } 
 
@@ -144,12 +149,14 @@ void init_list(vector<Employee> collection){
     while(!collection.empty()){
         person = collection.front();
         node = new List(person);
-        node->infront = nullptr;
-        node->behind = tail;
-        tail->infront = node;
+        node->infront = tail;
+        node->behind = nullptr;
+        tail->behind = node;
         tail = node;
         collection.erase(collection.begin());
     }
+
+    node->output_all(head);
 
     return;
 }
