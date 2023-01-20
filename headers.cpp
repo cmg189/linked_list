@@ -47,10 +47,17 @@ void Employee:: set_salary(float salary){
     return;
 }
 
+// outputs all private member variables of object
+void Employee:: output_info(){
+    cout << "Employee: " << this->get_name() << endl;
+    cout << "ID: " << this->get_id() << endl;
+    cout << "Position: " << this->get_position() << endl;
+    cout << "Salary: $" << this->get_salary() << endl << endl;
+    return;
+}
+
 // constructor
 List:: List(Employee person){
-    //List* node = new List(person);
-    //node-> data = person;
     this -> data = person;
     this-> infront = nullptr;
     this-> behind = nullptr;
@@ -58,8 +65,8 @@ List:: List(Employee person){
 }
 
 // output all objects in data
-void List:: output_all(){
-    cout << this-> data.get_name() << endl;
+void List:: output_all(List* head){
+    
     return;
 } 
 
