@@ -47,8 +47,11 @@ class List {
 // output program description
 void start_info();
 
-// initialize list from file
-void load_data();
+// initialize objects from file
+vector<Employee> load_data();
+
+// initialize list from objects
+void init_list(vector<Employee> collection);
 
 // menu choices
 int menu();
