@@ -40,6 +40,7 @@ class List {
         List* infront;
         List* behind;
 
+        void output_all();
         void append();
 
 };
