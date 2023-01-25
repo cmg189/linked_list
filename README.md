@@ -85,6 +85,24 @@ vector<Employee> load_data();
 ---
 
 ```cpp
+void init_list(vector<Employee> collection)
+```
+
+- Description
+
+  Initalizes linked list
+
+- Parameters
+
+  `vector<Employee> collection` Vector of employee objects used to initalize list
+
+- Return
+
+  None
+
+---
+
+```cpp
 
 ```
 
