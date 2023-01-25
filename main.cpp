@@ -12,8 +12,10 @@ int main(){
     bool done = false;
     while(!done){
         int choice = menu();
+
         switch(choice){
             case 1:{
+                Employee person = create_object();
                 break;
             }
             case 2:{
