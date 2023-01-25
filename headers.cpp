@@ -156,13 +156,14 @@ void init_list(vector<Employee> collection){
 void start_info(){
     cout << "\t\tDouble Linked List\n\n";
     cout << "This list stores Employee objects that have the following attributes\n";
-    cout << "Name, ID, Position, and Salary\n\n";
+    cout << "Name, ID, Position, and Salary\n";
     return;
 }
 
+// get list operation from user
 int menu(){
     int choice;
-    cout << "Choose a list operation to perform\n";
+    cout << "\nChoose a list operation to perform\n";
     cout << "1 Add employee\n";
     cout << "2 Delete employee\n";
     cout << "3 Output list\n";
