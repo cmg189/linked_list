@@ -192,6 +192,11 @@ Employee create_object(){
     getline(cin, position);
     cout << "Salary: $";
     cin >> salary;
+    //
+    // FIX ME
+    // take into account if a user enters 85,500
+    // cin as string then convert to float
+    //
 
     Employee person(name, id, position, salary);
 
