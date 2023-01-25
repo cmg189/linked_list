@@ -134,7 +134,7 @@ Employee create_object()
 
 - Return
 
-  None
+  `Employee person` Object to be added to list
 
 ---
 
