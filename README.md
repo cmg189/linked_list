@@ -103,6 +103,24 @@ void init_list(vector<Employee> collection)
 ---
 
 ```cpp
+int menu()
+```
+
+- Description
+
+  Outputs list operations for user to choose from
+
+- Parameters
+
+  None
+
+- Return
+
+  `int choice` List operation to perform
+
+---
+
+```cpp
 
 ```
 
