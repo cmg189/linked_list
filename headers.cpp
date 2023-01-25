@@ -162,6 +162,7 @@ void start_info(){
 
 // get list operation from user
 int menu(){
+    string new_line;
     int choice;
     cout << "\nChoose a list operation to perform\n";
     cout << "1 Add employee\n";
@@ -170,6 +171,29 @@ int menu(){
     cout << "4 End program\n\n";
     cout << ">";
     cin >> choice;
+    getline(cin, new_line);
 
     return choice;
+}
+
+// create new Employee object
+Employee create_object(){
+    string name, position, new_line;
+    int id;
+    float salary;
+
+    cout << "\nEnter the details of the new employee\n";
+    cout << "Name: ";
+    getline(cin, name);
+    cout << "ID: ";
+    cin >> id;
+    getline(cin, new_line);
+    cout << "Position: ";
+    getline(cin, position);
+    cout << "Salary: $";
+    cin >> salary;
+
+    Employee person(name, id, position, salary);
+
+    return person;
 }
