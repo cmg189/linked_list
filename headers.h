@@ -57,3 +57,6 @@ void start_info();
 
 // menu choices
 int menu();
+
+// create new Employee object
+Employee create_object();
