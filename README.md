@@ -121,14 +121,20 @@ int menu()
 ---
 
 ```cpp
-
+Employee create_object()
 ```
 
 - Description
 
+  Initalizes an Employee object from user input
+
 - Parameters
 
+  None
+
 - Return
+
+  None
 
 ---
 
