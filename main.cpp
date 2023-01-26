@@ -3,8 +3,9 @@
 int main(){
     // read data from file and initalize linked list
     vector<Employee> collection = load_data();
-    init_list(collection);
-
+    pair<List*, List*> head_tail = init_list(collection);
+    //List* node = new List();
+    //node->output_all(head_tail.first);
     // output program description
     start_info();
 
@@ -12,7 +13,6 @@ int main(){
     bool done = false;
     while(!done){
         int choice = menu();
-
         switch(choice){
             case 1:{
                 Employee person = create_object();
