@@ -85,7 +85,7 @@ vector<Employee> load_data();
 ---
 
 ```cpp
-void init_list(vector<Employee> collection)
+pair<List*, List*> init_list(vector<Employee> collection)
 ```
 
 - Description
@@ -98,7 +98,7 @@ void init_list(vector<Employee> collection)
 
 - Return
 
-  None
+  `pair<List*, List*> head_tail` Pair representing head and tail pointers of list
 
 ---
 
