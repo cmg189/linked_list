@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <utility>
 using namespace std;
 
 // stored in linked list
@@ -36,6 +37,7 @@ class Employee {
 // double linked list
 class List {
     public:
+        List();
         List(Employee person);
         Employee data;
         List* infront;
@@ -50,7 +52,7 @@ class List {
 vector<Employee> load_data();
 
 // initialize list from objects
-void init_list(vector<Employee> collection);
+pair<List*, List*> init_list(vector<Employee> collection);
 
 // output program description
 void start_info();
