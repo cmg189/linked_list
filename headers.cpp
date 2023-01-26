@@ -56,9 +56,17 @@ void Employee:: output_info(){
     return;
 }
 
-// constructor
+// constructors
+List:: List(){
+    Employee person;
+    this-> data = person;
+    this-> infront = nullptr;
+    this-> behind = nullptr;
+    return;
+}
+
 List:: List(Employee person){
-    this -> data = person;
+    this-> data = person;
     this-> infront = nullptr;
     this-> behind = nullptr;
     return;
@@ -124,7 +132,7 @@ vector<Employee> load_data(){
 }
 
 // initialize list from objects
-void init_list(vector<Employee> collection){
+pair<List*, List*> init_list(vector<Employee> collection){
     // create head node
     Employee person = collection.front();
     collection.erase(collection.begin());
@@ -146,10 +154,10 @@ void init_list(vector<Employee> collection){
         tail = node;
         collection.erase(collection.begin());
     }
+    delete node;
 
-    //node->output_all(head);
-
-    return;
+    pair<List*, List*> head_tail = make_pair(head, tail);
+    return head_tail;
 }
 
 // output program description
@@ -169,7 +177,7 @@ int menu(){
     cout << "2 Delete employee\n";
     cout << "3 Output list\n";
     cout << "4 End program\n\n";
-    cout << ">";
+    cout << "> ";
     cin >> choice;
     getline(cin, new_line);
 
