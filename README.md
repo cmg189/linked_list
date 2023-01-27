@@ -138,6 +138,24 @@ Employee create_object()
 
 ---
 
+```cpp
+void output_all(List* head)
+```
+
+- Description
+
+  Outputs all employee data in list
+
+- Parameters
+
+  `List* head` List pointer to head of list
+
+- Return
+
+  None
+
+---
+
 ## Classes <a name="class"></a>
 
 ```cpp
@@ -213,11 +231,6 @@ class List
   `List* infront` Pointer to node infront of current node
 
   `List* behind` Pointer to node behind current node
-
-  Functions:
-
-  `void output_all(List* head)` Outputs all objects in list starting at head
-
 
 
 ## Resources <a name="res"></a>
