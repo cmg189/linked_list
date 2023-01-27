@@ -63,3 +63,6 @@ void output_all(List* head);
 
 // add employee to list
 void append(pair<List*, List*>& head_tail, Employee person);
+
+// return employee specified by user
+Employee select_employee(pair<List*, List*> head_tail);
