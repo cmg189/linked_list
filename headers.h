@@ -60,3 +60,6 @@ Employee create_object();
 
 // output all employees starting at beginning of list 
 void output_all(List* head);
+
+// add employee to list
+void append(pair<List*, List*>& head_tail, Employee person);
