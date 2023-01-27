@@ -169,7 +169,7 @@ Employee create_object(){
     int id;
     float salary;
 
-    cout << "\nEnter the details of the new employee\n";
+    cout << "\nEnter the details of the new employee\n\n";
     cout << "Name: ";
     getline(cin, name);
     cout << "ID: ";
@@ -213,4 +213,33 @@ void append(pair<List*, List*>& head_tail, Employee person){
 
     cout << endl << person.get_name() << " has been added\n";
     return;
+}
+
+// return employee specified by user
+Employee select_employee(pair<List*, List*> head_tail){
+    bool list_end = false;
+    int id;
+    cout << "\nEnter the employee ID you would like to delete\n\n";
+    cout << "> ";
+    cin >> id;
+
+    // start searching through list
+    List* search = head_tail.first;
+    Employee person = search->data;
+    int target = person.get_id();
+
+    while(target != id){
+        search = search->behind;
+        if(search == nullptr){
+            list_end = true;
+            break;
+        }
+    }
+
+    // FIX ME: if not found return from function but what return value?
+    if(list_end){
+        cout << "\nEmployee not found with that ID\n\n";
+    }
+    
+    return person;
 }
