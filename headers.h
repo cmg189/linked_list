@@ -37,15 +37,10 @@ class Employee {
 // double linked list
 class List {
     public:
-        List();
         List(Employee person);
         Employee data;
         List* infront;
         List* behind;
-
-        void output_all(List* head);
-        void append();
-
 };
 
 // initialize objects from file
@@ -62,3 +57,6 @@ int menu();
 
 // create new Employee object
 Employee create_object();
+
+// output all employees starting at beginning of list 
+void output_all(List* head);
