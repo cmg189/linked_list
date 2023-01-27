@@ -15,6 +15,7 @@ int main(){
         switch(choice){
             case 1:{
                 Employee person = create_object();
+                append(head_tail, person);
                 break;
             }
             case 2:{
@@ -35,6 +36,6 @@ int main(){
         }
     }
 
-    cout << "Program ended\n\n";
+    cout << "\nProgram ended\n\n";
     return 0;
 }
