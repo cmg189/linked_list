@@ -156,6 +156,26 @@ void output_all(List* head)
 
 ---
 
+```cpp
+void append(pair<List*, List*>& head_tail, Employee person)
+```
+
+- Description
+
+  Adds an employee object to end of list
+
+- Parameters
+
+  `pair<List*, List*>& head_tail` Pair of List pointers representing the head and tail of the last, passed by reference
+
+  `Employee person` Employee object to be added to list
+
+- Return
+
+  None
+
+---
+
 ## Classes <a name="class"></a>
 
 ```cpp
