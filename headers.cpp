@@ -57,31 +57,12 @@ void Employee:: output_info(){
 }
 
 // constructors
-List:: List(){
-    Employee person;
-    this-> data = person;
-    this-> infront = nullptr;
-    this-> behind = nullptr;
-    return;
-}
-
 List:: List(Employee person){
     this-> data = person;
     this-> infront = nullptr;
     this-> behind = nullptr;
     return;
 }
-
-// output all objects in data
-void List:: output_all(List* head){
-    List* display = head;
-    while(display != nullptr){
-        Employee person = display->data;
-        person.output_info();
-        display = display->behind;
-    }
-    return;
-} 
 
 // initialize objects from file
 vector<Employee> load_data(){
@@ -139,23 +120,21 @@ pair<List*, List*> init_list(vector<Employee> collection){
     List* node = new List(person);
     node->infront = nullptr;
     node->behind = nullptr;
-    List* head;
-    List* tail;
-    head = node;
-    tail = node;
+    List* head = node;
+    List* tail = node;
 
     // add all objects to node
     while(!collection.empty()){
         person = collection.front();
-        node = new List(person);
+        List* node = new List(person);
         node->infront = tail;
         node->behind = nullptr;
         tail->behind = node;
         tail = node;
         collection.erase(collection.begin());
     }
-    delete node;
 
+    // return the head and tail pointers 
     pair<List*, List*> head_tail = make_pair(head, tail);
     return head_tail;
 }
@@ -209,4 +188,17 @@ Employee create_object(){
     Employee person(name, id, position, salary);
 
     return person;
+}
+
+// output all employees
+void output_all(List* head){
+    cout << "\n\t\tList of Employees\n\n";
+    List* display = head;
+    while(display != nullptr){
+        Employee person = display->data;
+        person.output_info();
+        display = display->behind;
+    }
+
+    return;
 }
