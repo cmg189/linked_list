@@ -4,8 +4,7 @@ int main(){
     // read data from file and initalize linked list
     vector<Employee> collection = load_data();
     pair<List*, List*> head_tail = init_list(collection);
-    //List* node = new List();
-    //node->output_all(head_tail.first);
+
     // output program description
     start_info();
 
@@ -22,6 +21,7 @@ int main(){
                 break;
             }
             case 3:{
+                output_all(head_tail.first);
                 break;
             }
             case 4:{
