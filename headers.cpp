@@ -202,3 +202,15 @@ void output_all(List* head){
 
     return;
 }
+
+// add employee to list
+void append(pair<List*, List*>& head_tail, Employee person){
+    List* node = new List(person);
+    node->infront = head_tail.second;
+    node->behind = nullptr;
+    head_tail.second->behind = node;
+    head_tail.second = node;
+
+    cout << endl << person.get_name() << " has been added\n";
+    return;
+}
