@@ -234,3 +234,5 @@ class List
 
 
 ## Resources <a name="res"></a>
+
+To see a simple implementatin of a linked list, consider wathcing this [video](https://www.youtube.com/watch?v=-StYr9wILqo)
