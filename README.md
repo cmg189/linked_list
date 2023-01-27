@@ -166,7 +166,7 @@ void append(pair<List*, List*>& head_tail, Employee person)
 
 - Parameters
 
-  `pair<List*, List*>& head_tail` Pair of List pointers representing the head and tail of the last, passed by reference
+  `pair<List*, List*>& head_tail` Pair of List pointers representing the head and tail of the list, passed by reference
 
   `Employee person` Employee object to be added to list
 
@@ -175,6 +175,23 @@ void append(pair<List*, List*>& head_tail, Employee person)
   None
 
 ---
+
+```cpp
+Employee select_employee(pair<List*, List*> head_tail)
+```
+
+- Description
+
+  Searches for employee in list based on thier ID specified by user
+
+- Parameters
+
+  `pair<List*, List*> head_tail` Pair of List pointers representing the head and tail of the list
+
+- Return
+
+  `Employee person` Employee object to be deleted
+
 
 ## Classes <a name="class"></a>
 
@@ -255,4 +272,4 @@ class List
 
 ## Resources <a name="res"></a>
 
-To see a simple implementatin of a double linked list, consider wathcing this [video](https://www.youtube.com/watch?v=-StYr9wILqo)
+To see a simple implementatin of a double linked list, consider watching this [video](https://www.youtube.com/watch?v=-StYr9wILqo)
