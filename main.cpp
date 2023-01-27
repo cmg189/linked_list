@@ -19,6 +19,7 @@ int main(){
                 break;
             }
             case 2:{
+                select_employee(head_tail);
                 break;
             }
             case 3:{
