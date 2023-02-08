@@ -19,7 +19,8 @@ int main(){
                 break;
             }
             case 2:{
-                select_employee(head_tail);
+                Employee person = select_employee(head_tail);
+                delete_employee(head_tail, person);
                 break;
             }
             case 3:{

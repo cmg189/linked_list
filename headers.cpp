@@ -234,12 +234,27 @@ Employee select_employee(pair<List*, List*> head_tail){
             list_end = true;
             break;
         }
+        person = search->data;
+        target = person.get_id();
     }
 
-    // FIX ME: if not found return from function but what return value?
+    // if ID is not found, return object with default constructor 
     if(list_end){
         cout << "\nEmployee not found with that ID\n\n";
+        Employee not_found;
+        return not_found;
     }
-    
+
     return person;
+}
+
+void delete_employee(pair<List*, List*>& head_tail, Employee person){
+    // indicates employee was not found
+    if(person.get_name() == "VOID"){
+        return;
+    }
+
+    
+
+    return;
 }
