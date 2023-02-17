@@ -66,3 +66,6 @@ void append(pair<List*, List*>& head_tail, Employee person);
 
 // return employee specified by user
 Employee select_employee(pair<List*, List*> head_tail);
+
+// remove emplyee from list
+void delete_employee(pair<List*, List*>& head_tail, Employee person);

@@ -248,13 +248,74 @@ Employee select_employee(pair<List*, List*> head_tail){
     return person;
 }
 
+// remove employee from list
 void delete_employee(pair<List*, List*>& head_tail, Employee person){
     // indicates employee was not found
     if(person.get_name() == "VOID"){
         return;
     }
 
-    
+    // search list to see if deleting head or tail of list
+    List* search = head_tail.first;
+    do{
+        cout << "finding\n";
+        Employee find = search->data;
+        if(find.get_id() == person.get_id()){
+            // deleting head of list
+            if(search == head_tail.first){
+                head_tail.first = search->infront;
+                search->infront->behind = nullptr;
+                break;
+            // deleting tail of list
+            }else if(search == head_tail.second){
+                head_tail.second = search->behind;
+                search->behind->infront = nullptr;
+                break;
+            // deleting middle of list
+            }else{
+                search->behind->infront = search->infront;
+                search->infront->behind = search->behind;
+                break;
+            }
+            delete search;
+            //return;
+        }
+        // keep searching list
+        cout << "searching\n";
+        search = search->infront;
+    }while(search != nullptr);
+
+
+    // FIX ME: loop exe only once
+    /*
+    while(search->infront != nullptr){
+        cout << "finding\n";
+        Employee find = search->data;
+        if(find.get_id() == person.get_id()){
+            // deleting head of list
+            if(search == head_tail.first){
+                head_tail.first = search->infront;
+                search->infront->behind = nullptr;
+                //break;
+            // deleting tail of list
+            }else if(search == head_tail.second){
+                head_tail.second = search->behind;
+                search->behind->infront = nullptr;
+                //break;
+            // deleting middle of list
+            }else{
+                search->behind->infront = search->infront;
+                search->infront->behind = search->behind;
+                //break;
+            }
+            delete search;
+            //return;
+        }
+        // keep searching list
+        cout << "searching\n";
+        search = search->infront;
+    }
+    */
 
     return;
 }
